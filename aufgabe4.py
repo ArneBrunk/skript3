@@ -47,4 +47,7 @@ class UFOEnemyShip(Ship):
     def getName(self):
         print("Dies ist das UFO:", self.name)
 
+#main
 newgame = Spiel("UFO", "Arne")
+newgame.ship.getDamage()
+newgame.ship.getName()
