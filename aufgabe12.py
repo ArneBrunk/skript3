@@ -55,32 +55,32 @@ class TrinkeKommando(Command):
 
 class Invoker:
     def __init__ (self):
-        self.aktion1 = None
-        self.aktion2 = None
+        self.taste1 = None
+        self.taste2 = None
     
-    def belegeAktion1(self, command: Command):
-        self.aktion1 = command
+    def belegeTaste1(self, command: Command):
+        self.taste1 = command
     
-    def belegeAktion2(self, command: Command):
-        self.aktion2 = command
+    def belegeTaste2(self, command: Command):
+        self.taste2 = command
     
-    def drueckeAktion1(self):
-        self.aktion1.execute()
+    def drueckeTaste1(self):
+        self.taste1.execute()
     
-    def drueckeAktion2(self):
-        self.aktion2.execute()
+    def drueckeTaste2(self):
+        self.taste2.execute()
 
 mario = Player("Mario")
 tastatur = Invoker()
 
-tastatur.belegeAktion1(WandereKommando(mario))
-tastatur.belegeAktion2(TrinkeKommando(mario))
+tastatur.belegeTaste1(WandereKommando(mario))
+tastatur.belegeTaste2(TrinkeKommando(mario))
 
-print("Jetzt mache Aktion 1")
-tastatur.drueckeAktion1()
+print("Jetzt drücke ich Taste 1")
+tastatur.drueckeTaste1()
 
-print("Jetzt mache Aktion 2")
-tastatur.drueckeAktion2()
+print("Jetzt drücke ich Taste 2")
+tastatur.drueckeTaste2()
 
 
 
