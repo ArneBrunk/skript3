@@ -48,6 +48,7 @@ class HealthGUI:
     def render(self, current, max):
         print("Health:", current, "/", max)
 
+# ConcreteObserver
 class Player(ObserverSubjekt):
     def __init__(self, healthGUI: HealthGUI, maxhealthpoints: int):
         ObserverSubjekt.__init__(self)
